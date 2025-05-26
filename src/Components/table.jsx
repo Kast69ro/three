@@ -134,7 +134,6 @@ const MyPrimeTable = () => {
         <Column body={actionTemplate} header="Actions" style={{ width: '150px' }} />
       </DataTable>
 
-      {/* View Modal */}
       <Dialog header="User Profile" visible={viewDialog} style={{ width: '400px' }} onHide={() => setViewDialog(false)}>
         <p><b>Name:</b> {selectedUser?.name}</p>
         <p><b>Email:</b> {selectedUser?.email}</p>
@@ -143,7 +142,6 @@ const MyPrimeTable = () => {
         <p><b>Status:</b> {selectedUser?.status ? 'Active' : 'Inactive'}</p>
       </Dialog>
 
-      {/* Edit/Add Modal */}
       <Dialog header={isAdd ? 'Add User' : 'Edit User'} visible={editDialog} style={{ width: '400px' }} onHide={() => setEditDialog(false)} footer={
         <div>
           <Button label="Cancel" icon="pi pi-times" onClick={() => setEditDialog(false)} className="p-button-text" />
